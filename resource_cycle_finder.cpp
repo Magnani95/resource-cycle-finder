@@ -132,7 +132,6 @@ bool file_reader(const char *resource_file_name)
 
 	return true;
 }
-
 /*template <typename T>
 void data_gathering(YAML::Node resource_file)
 {
