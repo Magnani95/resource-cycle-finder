@@ -1,0 +1,44 @@
+---
+resources:
+    - name: "res_one"
+      stored: 400
+    - name: "res_two"
+      stored: 400
+    - name: "res_three"
+      stored: 0
+
+
+crafts:
+    - name: "craft_zero"
+      input:
+            - resource: "res_three"
+              amount: 4
+      output:
+            - resource: "res_one"
+              amount: 2
+
+    - name: "craft_one"
+      input:
+            - resource: "res_one"
+              amount: 2
+      output:
+            - resource: "res_two"
+              amount: 1
+
+    - name: "craft_two"
+      input:
+            - resource: "res_two"
+              amount: 2
+      output:
+            - resource: "res_one"
+              amount: 1
+
+    - name: "craft_three"
+      input:
+            - resource: "res_one"
+              amount: 1
+            - resource: "res_two"
+              amount: 1
+      output:
+            - resource: "res_three"
+              amount: 4
