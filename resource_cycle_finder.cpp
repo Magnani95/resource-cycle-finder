@@ -12,8 +12,8 @@
 
 #include <omp.h>
 #include "yaml-cpp/yaml.h"
-#include "debug.hpp"
-#include "struct.h"
+#include "include/debug.hpp"
+#include "include/struct.h"
 using namespace std;
 
 #define STABLE
@@ -56,7 +56,8 @@ int main(int argc, char const *argv[])
 	before_status.push_back(global_data.initial_status);
 
 	//setbuf(stdout, NULL);
-	tree_generation(before_status, after_status);
+
+	//tree_generation(before_status, after_status);
 
 	cout<<endl;
 
@@ -132,12 +133,7 @@ bool file_reader(const char *resource_file_name)
 
 	return true;
 }
-/*template <typename T>
-void data_gathering(YAML::Node resource_file)
-{
 
-}
-*/
 void tree_generation(vector<status_t> &before_status, vector<status_t> &after_status)
 {
 	status_t actual_status;
